@@ -1,0 +1,6 @@
+framework module Pods_AYMTestTests {
+  umbrella header "Pods-AYMTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
