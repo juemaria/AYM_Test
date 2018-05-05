@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		37FE4EDCF956EF130236B497 /* Pods_AYMTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20769B8ABF3B060F5229872 /* Pods_AYMTestUITests.framework */; };
 		396D5130545B46891052B7B1 /* Pods_AYMTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905B30446C3465AAE0A00F4F /* Pods_AYMTestTests.framework */; };
+		671E0CB2209DD44E00369F99 /* if_Direction_Board_381624.png in Resources */ = {isa = PBXBuildFile; fileRef = 671E0CB1209DD44D00369F99 /* if_Direction_Board_381624.png */; };
+		671E0CB7209DF7A700369F99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671E0CB6209DF7A700369F99 /* SWRevealViewController.m */; };
+		671E0CB9209DF9B000369F99 /* smackBurger.png in Resources */ = {isa = PBXBuildFile; fileRef = 671E0CB8209DF9B000369F99 /* smackBurger.png */; };
+		671E0CBB209E303600369F99 /* imgnot.png in Resources */ = {isa = PBXBuildFile; fileRef = 671E0CBA209E303500369F99 /* imgnot.png */; };
 		6757AA1320999D4B00F82BFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757AA1220999D4B00F82BFE /* AppDelegate.swift */; };
 		6757AA1520999D4B00F82BFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757AA1420999D4B00F82BFE /* ViewController.swift */; };
 		6757AA1820999D4B00F82BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6757AA1620999D4B00F82BFE /* Main.storyboard */; };
@@ -22,6 +26,9 @@
 		6757AA482099CD9700F82BFE /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757AA472099CD9700F82BFE /* DataModel.swift */; };
 		6757AA4C2099FAED00F82BFE /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757AA4B2099FAED00F82BFE /* WeatherVC.swift */; };
 		6757AA4E209A07E900F82BFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757AA4D209A07E900F82BFE /* Constants.swift */; };
+		67C09B0C209AEC84005F2E26 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C09B0B209AEC84005F2E26 /* CollectionViewCell.swift */; };
+		67C09B0E209B7948005F2E26 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C09B0D209B7948005F2E26 /* DataManager.swift */; };
+		67C09B10209D002C005F2E26 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C09B0F209D002C005F2E26 /* mainViewController.swift */; };
 		BD19FDBB207CA7E71EC1AB6D /* Pods_AYMTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36BD679BC9339AF9D5968A9 /* Pods_AYMTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +52,12 @@
 /* Begin PBXFileReference section */
 		155BC58C0CC4273F209C8D19 /* Pods-AYMTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYMTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AYMTestTests/Pods-AYMTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		5368E05BD3416CD9FA92DC6C /* Pods-AYMTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYMTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AYMTest/Pods-AYMTest.debug.xcconfig"; sourceTree = "<group>"; };
+		671E0CB1209DD44D00369F99 /* if_Direction_Board_381624.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = if_Direction_Board_381624.png; sourceTree = "<group>"; };
+		671E0CB4209DF79900369F99 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		671E0CB5209DF7A600369F99 /* AYMTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AYMTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		671E0CB6209DF7A700369F99 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		671E0CB8209DF9B000369F99 /* smackBurger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smackBurger.png; sourceTree = "<group>"; };
+		671E0CBA209E303500369F99 /* imgnot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgnot.png; sourceTree = "<group>"; };
 		6757AA0F20999D4B00F82BFE /* AYMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AYMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6757AA1220999D4B00F82BFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6757AA1420999D4B00F82BFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +77,9 @@
 		6757AA472099CD9700F82BFE /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		6757AA4B2099FAED00F82BFE /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		6757AA4D209A07E900F82BFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		67C09B0B209AEC84005F2E26 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		67C09B0D209B7948005F2E26 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		67C09B0F209D002C005F2E26 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		74C6815F87F53C56C3347D69 /* Pods-AYMTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYMTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AYMTestUITests/Pods-AYMTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B90A4D46D93DDD99F27472D /* Pods-AYMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-AYMTest/Pods-AYMTest.release.xcconfig"; sourceTree = "<group>"; };
 		905B30446C3465AAE0A00F4F /* Pods_AYMTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AYMTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,9 +140,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		671E0CB3209DF78000369F99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				671E0CB6209DF7A700369F99 /* SWRevealViewController.m */,
+				671E0CB4209DF79900369F99 /* SWRevealViewController.h */,
+				671E0CB5209DF7A600369F99 /* AYMTest-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		671E0CBC209E44B300369F99 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				671E0CBA209E303500369F99 /* imgnot.png */,
+				671E0CB8209DF9B000369F99 /* smackBurger.png */,
+				671E0CB1209DD44D00369F99 /* if_Direction_Board_381624.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		671E0CBD209E44EC00369F99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6757AA472099CD9700F82BFE /* DataModel.swift */,
+				67C09B0D209B7948005F2E26 /* DataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6757AA0620999D4B00F82BFE = {
 			isa = PBXGroup;
 			children = (
+				671E0CB3209DF78000369F99 /* Supporting Files */,
 				6757AA4D209A07E900F82BFE /* Constants.swift */,
 				6757AA1120999D4B00F82BFE /* AYMTest */,
 				6757AA2920999D4B00F82BFE /* AYMTestTests */,
@@ -153,14 +199,17 @@
 				6757AA1220999D4B00F82BFE /* AppDelegate.swift */,
 				6757AA1420999D4B00F82BFE /* ViewController.swift */,
 				6757AA452099BC4400F82BFE /* WebService.swift */,
-				6757AA1620999D4B00F82BFE /* Main.storyboard */,
+				67C09B0F209D002C005F2E26 /* mainViewController.swift */,
 				6757AA4B2099FAED00F82BFE /* WeatherVC.swift */,
 				6757AA432099B8B900F82BFE /* Tablecell.swift */,
+				67C09B0B209AEC84005F2E26 /* CollectionViewCell.swift */,
+				6757AA1620999D4B00F82BFE /* Main.storyboard */,
+				671E0CBD209E44EC00369F99 /* Model */,
 				6757AA1C20999D4B00F82BFE /* Assets.xcassets */,
+				671E0CBC209E44B300369F99 /* Images */,
 				6757AA1E20999D4B00F82BFE /* LaunchScreen.storyboard */,
 				6757AA2120999D4B00F82BFE /* Info.plist */,
 				6757AA1920999D4B00F82BFE /* AYMTest.xcdatamodeld */,
-				6757AA472099CD9700F82BFE /* DataModel.swift */,
 			);
 			path = AYMTest;
 			sourceTree = "<group>";
@@ -260,7 +309,13 @@
 				TargetAttributes = {
 					6757AA0E20999D4B00F82BFE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					6757AA2520999D4B00F82BFE = {
 						CreatedOnToolsVersion = 9.2;
@@ -300,6 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6757AA2020999D4B00F82BFE /* LaunchScreen.storyboard in Resources */,
+				671E0CB2209DD44E00369F99 /* if_Direction_Board_381624.png in Resources */,
+				671E0CB9209DF9B000369F99 /* smackBurger.png in Resources */,
+				671E0CBB209E303600369F99 /* imgnot.png in Resources */,
 				6757AA1D20999D4B00F82BFE /* Assets.xcassets in Resources */,
 				6757AA1820999D4B00F82BFE /* Main.storyboard in Resources */,
 			);
@@ -394,9 +452,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AYMTest/Pods-AYMTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -477,13 +540,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6757AA1520999D4B00F82BFE /* ViewController.swift in Sources */,
+				67C09B0E209B7948005F2E26 /* DataManager.swift in Sources */,
+				67C09B10209D002C005F2E26 /* mainViewController.swift in Sources */,
 				6757AA4C2099FAED00F82BFE /* WeatherVC.swift in Sources */,
+				67C09B0C209AEC84005F2E26 /* CollectionViewCell.swift in Sources */,
 				6757AA1320999D4B00F82BFE /* AppDelegate.swift in Sources */,
 				6757AA442099B8B900F82BFE /* Tablecell.swift in Sources */,
 				6757AA462099BC4400F82BFE /* WebService.swift in Sources */,
 				6757AA1B20999D4B00F82BFE /* AYMTest.xcdatamodeld in Sources */,
 				6757AA482099CD9700F82BFE /* DataModel.swift in Sources */,
 				6757AA4E209A07E900F82BFE /* Constants.swift in Sources */,
+				671E0CB7209DF7A700369F99 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +717,7 @@
 			baseConfigurationReference = 5368E05BD3416CD9FA92DC6C /* Pods-AYMTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y559A624JE;
 				INFOPLIST_FILE = AYMTest/Info.plist;
@@ -657,6 +725,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project.AYMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/AYMTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -667,6 +737,7 @@
 			baseConfigurationReference = 7B90A4D46D93DDD99F27472D /* Pods-AYMTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y559A624JE;
 				INFOPLIST_FILE = AYMTest/Info.plist;
@@ -674,6 +745,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project.AYMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/AYMTest-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

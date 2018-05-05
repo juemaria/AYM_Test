@@ -9,21 +9,41 @@
 import UIKit
 
 class Tablecell: UITableViewCell {
-    @IBOutlet var Picture: UIImageView!
-    @IBOutlet var ResturentName: UILabel!
+   
+    @IBOutlet var img: UIImageView!
+    @IBOutlet var rate: UILabel!
+    @IBOutlet var Name: UILabel!
     @IBOutlet var address: UILabel!
     
-  
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    func updateView(item :NearByRestaurant)
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+    func updateCell(item :NearBy)
 {
-    ResturentName.text = item.Address
-   address.text = item.PlaceName
+  Name.text = String(item.name!)
+    address.text = String(describing: item.address!)
+    if item.rating != nil
+    {
+       rate.text =  String(describing: item.rating!)
     }
+   else
+    {
+        rate.text = "0"
+    }
+    if  item.photo.first?.photorefernce != nil
+    {
+        let iconid = String(describing: item.photo[0].photorefernce!)
+        let url =  URL(string:"\(RESTAURENTIMAGE)\(iconid)&key=\(NEARAPI)" )
+        let data = try?Data(contentsOf:url!)
+        img.image = UIImage(data: data!)
+    }
+    else
+    {
+        img.image = UIImage(named: "imgnot.png")
+    }
+
+    }
+    
     
 }

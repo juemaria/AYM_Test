@@ -8,104 +8,79 @@
 
 import UIKit
 import GooglePlaces
-
+//Global variables
+var LatitudeR = CLLocationDegrees()
+var LongitudeR = CLLocationDegrees()
 class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate {
-    @IBOutlet var NearByPlace: UITableView!
-    fileprivate var RDeatails = [NearByRestaurant]()
-  //  var Location: GMSPlacesClient!
+    //Outlets
+    @IBOutlet var Animator: UIActivityIndicatorView!
+   @IBOutlet var RestaurentTable: UITableView!
+    @IBOutlet var MenuBtn: UIButton!
+    //Local Variables
      var locationManager = CLLocationManager()
-    // Add a pair of UILabels in Interface Builder, and connect the outlets to these variables.
-    @IBOutlet var Place: UILabel!
-    @IBOutlet var Sender: UIButton!
-    
-    //  @IBOutlet var addressLabel: UILabel!
-    
+    fileprivate var RDeatails = [NearBy]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        WebService.Instance.getCurrentPlace(completion: {(placelikelihoodList) in
-           
-                               // let place = placeLikelihoodList.likelihoods.first?.place
-            let likehoods = placelikelihoodList.likelihoods
-                
-                                for object in likehoods
-                                {
-                                   if object.place.types.contains("restaurant") == true
-                                   {
-                                    let details = NearByRestaurant(json: object)
-                                    self.RDeatails.append(details)
-                                    }
-            }
-                DispatchQueue.main.async {
-                    
-                    self.NearByPlace.reloadData()
-                }
-            })
-        
-//        Location = GMSPlacesClient.shared()
-//        print("reached")R
-//
-//        locationManager.requestAlwaysAuthorization()
-//        locationManager.requestWhenInUseAuthorization()
-        
-//        if CLLocationManager.locationServicesEnabled() {
-//            locationManager.delegate = self
-//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-//            locationManager.startUpdatingLocation()
-//        }
+      Animator.startAnimating()
+        MenuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        getdevicelocation()
+    }
+    func getdevicelocation()
+    {
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager.delegate = self
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            self.locationManager.startUpdatingLocation()
+            locationManager.startUpdatingLocation()
+        }
         
     }
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-//        print("locations = \(locValue.latitude) \(locValue.longitude)")
-//    }
-    // Add a UIButton in Interface Builder, and connect the action to this function.
-//    @IBAction func getCurrentPlace(_ sender: UIButton) {
-//        print("button pressed")
-//        Location.currentPlace(callback: { (placeLikelihoodList, error) -> Void in
-//            if let error = error {
-//                print("Pick Place error: \(error.localizedDescription)")
-//                return
-//            }
-//
-//            self.Place.text = "no place"
-//          //  self.addressLabel.text = ""
-//
-//            if let placeLikelihoodList = placeLikelihoodList {
-//                let place = placeLikelihoodList.likelihoods.first?.place
-//                if let place = place {
-//                    self.Place.text = place.name
-//
-//                  //  self.addressLabel.text = place.formattedAddress?.components(separatedBy: ", ")
-//                        //.joined(separator: "\n")
-//                }
-//            }
-//        })
-   // }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+       
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return  }
+        LatitudeR = locValue.latitude
+        LongitudeR = locValue.longitude
+        print(LatitudeR)
+         webservice()
+    }
+        func webservice()
+        {
+            WebService.Instance.getNearByPlace(completion: {(response) in
+            
+                let task = response["results"] as! [[String:Any]]
+                
+                for obj in task{
+                    let data = NearBy(Geometry:obj)
+                    self.RDeatails.append(data)
+                }
+                self.RestaurentTable.reloadData()
+                self.Animator.stopAnimating()
+                self.Animator.isHidden = true
+            })
+           
+        }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-    print(RDeatails.count)
         return RDeatails.count
     }
-//
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseID", for: indexPath) as? Tablecell
+        if let tablecell = tableView.dequeueReusableCell(withIdentifier: "cells", for: indexPath) as? Tablecell
         {
-            cell.updateView(item:RDeatails[indexPath.row])
-      
-       return cell
+            let cellDetails = RDeatails[indexPath.row]
+            tablecell.updateCell(item:cellDetails)
+       return tablecell
         }
         else
         {
         return Tablecell()
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

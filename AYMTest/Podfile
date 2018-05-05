@@ -8,6 +8,9 @@ target 'AYMTest' do
   # Pods for AYMTest
 
  pod ’GooglePlaces'
+pod ‘Alamofire’
+pod ‘SwiftyJSON’
+
   target 'AYMTestTests' do
     inherit! :search_paths
     # Pods for testing

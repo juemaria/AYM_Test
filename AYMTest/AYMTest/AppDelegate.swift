@@ -9,17 +9,22 @@
 import UIKit
 import CoreData
 import GooglePlaces
+import CoreLocation
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        GMSPlacesClient.provideAPIKey("AIzaSyBnov04_9nWhHHVkM6B0vKYtIcxekNH1kI")
-        return true
+        
+        // Override point for customization after application launch
+   
+       return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
